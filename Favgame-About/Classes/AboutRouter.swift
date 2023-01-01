@@ -9,7 +9,7 @@ import Foundation
 import Favgame_Core
 
 public class AboutRouter {
-  let container: Container = {
+  public let container: Container = {
     let container = Injection().container
     
     container.register(AboutViewController.self) { _ in
