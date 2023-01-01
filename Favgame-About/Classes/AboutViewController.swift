@@ -8,7 +8,7 @@
 import UIKit
 import Favgame_Core
 
-class AboutViewController: UIViewController {
+public class AboutViewController: UIViewController {
   
   // MARK: - Properties
   private let defaults = UserDefaults.standard
@@ -55,7 +55,7 @@ class AboutViewController: UIViewController {
   
   // MARK: - Life Cycle
   
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor(rgb: Constant.rhinoColor)
     let barButtonImage = UIImage(systemName: "square.and.pencil")
@@ -185,7 +185,7 @@ extension AboutViewController: UIAlertViewDelegate {
 
 extension AboutViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+  public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     var pickedImage = UIImage()
     if imagePicker.sourceType == .camera {
       pickedImage = (info[UIImagePickerController.InfoKey.editedImage] as? UIImage)!
